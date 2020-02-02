@@ -1,16 +1,16 @@
 #include "basal.h"
 
 /*
-74 ÎÊÌâ±àºÅ£ºVBUG00027982
-74.1 ÎÊÌâ¸ÅÊö
-Èí¼þÃû³Æ£ºBWTXCL
-ÎÊÌâÀàÐÍ£º ÎÞ·ûºÅÕûÊýÉÏÒç
-ÒýÈë½×¶Î£ºÊµÏÖ½×¶Î
-±à³ÌÓïÑÔ£ºCÓïÑÔ
-Ìá½»ÈÕÆÚ£º 2018Äê
-74.2 ÎÊÌâ·ÖÎö
-1¡¢Èí¼þÔÚPullen_track.cÖÐ223ÐÐ¼ÆËãepk_tempÊ±£¬³ýÊýÎª±äÁ¿´ÓFPAG»ñµÃ£¬´æÔÚ³ýÊýÎª0µÄ¿ÉÄÜ¡£
-2¡¢CN0_estimate.cÖÐ78ÐÐM-CN0_Estimate_TF.NP[ii]×÷Îª³ýÊý´æÔÚµÈÓÚÁãµÄ¿ÉÄÜ¡£
+74 é—®é¢˜ç¼–å·ï¼šVBUG00027982
+74.1 é—®é¢˜æ¦‚è¿°
+è½¯ä»¶åç§°ï¼šBWTXCL
+é—®é¢˜ç±»åž‹ï¼š æ— ç¬¦å·æ•´æ•°ä¸Šæº¢
+å¼•å…¥é˜¶æ®µï¼šå®žçŽ°é˜¶æ®µ
+ç¼–ç¨‹è¯­è¨€ï¼šCè¯­è¨€
+æäº¤æ—¥æœŸï¼š 2018å¹´
+74.2 é—®é¢˜åˆ†æž
+1ã€è½¯ä»¶åœ¨Pullen_track.cä¸­223è¡Œè®¡ç®—epk_tempæ—¶ï¼Œé™¤æ•°ä¸ºå˜é‡ä»ŽFPAGèŽ·å¾—ï¼Œå­˜åœ¨é™¤æ•°ä¸º0çš„å¯èƒ½ã€‚
+2ã€CN0_estimate.cä¸­78è¡ŒM-CN0_Estimate_TF.NP[ii]ä½œä¸ºé™¤æ•°å­˜åœ¨ç­‰äºŽé›¶çš„å¯èƒ½ã€‚
 */
 
 #define ADDR_EPK 0x20010010
@@ -18,12 +18,9 @@
 void case074(void)
 {
 	unsigned int EPK;
-	double dEPK;
-	double epk_temp;
+	unsigned int epk_temp;
 
 	EPK = READ_ADDR_UI32(ADDR_EPK);
-	dEPK = ((double)((int)EPK)) * 0.125;
-	epk_temp = 1.0 / dEPK;
-
+	epk_temp = 1 / EPK;
 	return;
 }
