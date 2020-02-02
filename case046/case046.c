@@ -1,19 +1,19 @@
 #include "basal.h"
 
 /*
-46 ÎÊÌâ±àºÅ£ºVBUG00023809
-46.1 ÎÊÌâ¸ÅÊö
-Èí¼þÃû³Æ£º KDZC
-ÎÊÌâÀàÐÍ£º ÎÞ·ûºÅÕûÊýÉÏÒç
-ÒýÈë½×¶Î£ºÊµÏÖ½×¶Î
-±à³ÌÓïÑÔ£ºCÓïÑÔ
-Ìá½»ÈÕÆÚ£º 2017Äê
-46.2 ÎÊÌâ·ÖÎö
-Óï¾äampL_mean=ampL_mean/AmpL[IdxPDW][0]£¬²»ÄÜÅÅ³ýAmpL[IdxPDW][0]Îª0µÄÇé¿ö£¬´ËÖÐÇé¿öAmpL[IdxPDW][0]ÓÃ×÷³ýÊý³ö´í¡£
+46 é—®é¢˜ç¼–å·ï¼šVBUG00023809
+46.1 é—®é¢˜æ¦‚è¿°
+è½¯ä»¶åç§°ï¼š KDZC
+é—®é¢˜ç±»åž‹ï¼š æ— ç¬¦å·æ•´æ•°ä¸Šæº¢
+å¼•å…¥é˜¶æ®µï¼šå®žçŽ°é˜¶æ®µ
+ç¼–ç¨‹è¯­è¨€ï¼šCè¯­è¨€
+æäº¤æ—¥æœŸï¼š 2017å¹´
+46.2 é—®é¢˜åˆ†æž
+è¯­å¥ampL_mean=ampL_mean/AmpL[IdxPDW][0]ï¼Œä¸èƒ½æŽ’é™¤AmpL[IdxPDW][0]ä¸º0çš„æƒ…å†µï¼Œæ­¤ä¸­æƒ…å†µAmpL[IdxPDW][0]ç”¨ä½œé™¤æ•°å‡ºé”™ã€‚
 */
 
-float AmpL[12][3];
-float ampL_mean;
+int AmpL[12][3];
+int ampL_mean;
 
 void case046(int IdxPDW)
 {
