@@ -1,22 +1,22 @@
 #include "basal.h"
 
 /*
-66 ÎÊÌâ±àºÅ£ºVBUG00011982
-66.1 ÎÊÌâ¸ÅÊö
-Èí¼þÃû³Æ£ºDGJK
-ÎÊÌâÀàÐÍ£º ÎÞ·ûºÅÕûÊýÉÏÒç
-ÒýÈë½×¶Î£ºÊµÏÖ½×¶Î
-±à³ÌÓïÑÔ£ºCÓïÑÔ
-Ìá½»ÈÕÆÚ£º 2015Äê
-66.2 ÎÊÌâ·ÖÎö
-º¯ÊýSel_TranMatr_JtoO¶Ô³ýÊýnormÎ´×ö³ýÁã±£»¤¡£
+66 é—®é¢˜ç¼–å·ï¼šVBUG00011982
+66.1 é—®é¢˜æ¦‚è¿°
+è½¯ä»¶åç§°ï¼šDGJK
+é—®é¢˜ç±»åž‹ï¼š æ— ç¬¦å·æ•´æ•°ä¸Šæº¢
+å¼•å…¥é˜¶æ®µï¼šå®žçŽ°é˜¶æ®µ
+ç¼–ç¨‹è¯­è¨€ï¼šCè¯­è¨€
+æäº¤æ—¥æœŸï¼š 2015å¹´
+66.2 é—®é¢˜åˆ†æž
+å‡½æ•°Sel_TranMatr_JtoOå¯¹é™¤æ•°normæœªåšé™¤é›¶ä¿æŠ¤ã€‚
 */
 
-double rWGS[3];
+int rWGS[3];
 
 void Sel_TranMatr_JtoO(double r[])
 {
-	double norm;
+	int norm;
 
 	norm = r[0] * r[0] + r[1] * r[1] + r[2] * r[2];
 
