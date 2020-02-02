@@ -1,35 +1,35 @@
 #include "basal.h"
 
 /*
-65 ÎÊÌâ±àºÅ£ºVBUG00005401
-65.1 ÎÊÌâ¸ÅÊö
-Èí¼şÃû³Æ£ºXHCL
-ÎÊÌâÀàĞÍ£º ÎŞ·ûºÅÕûÊıÉÏÒç
-ÒıÈë½×¶Î£ºÊµÏÖ½×¶Î
-±à³ÌÓïÑÔ£ºCÓïÑÔ
-Ìá½»ÈÕÆÚ£º 2012Äê
-65.2 ÎÊÌâ·ÖÎö
-Èí¼ş¶¨Òåg_dTargetPowerMaxÎªĞÅºÅ¹¦ÂÊ¼«Öµ£¬ÔÚÊä³ö²âÁ¿Êı¾İÊ±²ÉÓÃÈçÏÂ±í´ïÊ½¼ÆËãµ±Ç°ÔëÉùÃÅÏŞ£º
+65 é—®é¢˜ç¼–å·ï¼šVBUG00005401
+65.1 é—®é¢˜æ¦‚è¿°
+è½¯ä»¶åç§°ï¼šXHCL
+é—®é¢˜ç±»å‹ï¼š æ— ç¬¦å·æ•´æ•°ä¸Šæº¢
+å¼•å…¥é˜¶æ®µï¼šå®ç°é˜¶æ®µ
+ç¼–ç¨‹è¯­è¨€ï¼šCè¯­è¨€
+æäº¤æ—¥æœŸï¼š 2012å¹´
+65.2 é—®é¢˜åˆ†æ
+è½¯ä»¶å®šä¹‰g_dTargetPowerMaxä¸ºä¿¡å·åŠŸç‡æå€¼ï¼Œåœ¨è¾“å‡ºæµ‹é‡æ•°æ®æ—¶é‡‡ç”¨å¦‚ä¸‹è¡¨è¾¾å¼è®¡ç®—å½“å‰å™ªå£°é—¨é™ï¼š
 temp = 10*log10(g_dTargetPowerMax*DELTA_NEAR/g_dNoisePower);
 temp = 10*log10(g_dTargetPowerMax*DELTA_FAR/g_dNoisePower);
-ÓÉÓÚÈí¼şÎ´¶Ôg_dTargetPowerMaxºÍg_dNoisePowerÎª0µÄÇé¿ö½øĞĞ±£»¤£¬µ¼ÖÂ¼ÆËã½á¹û³öÏÖ10*log10£¨0£©»òÕß³ıÊıÎª0µÄÇé¿ö£¬Ôì³É¼ÆËã´íÎó¡£
+ç”±äºè½¯ä»¶æœªå¯¹g_dTargetPowerMaxå’Œg_dNoisePowerä¸º0çš„æƒ…å†µè¿›è¡Œä¿æŠ¤ï¼Œå¯¼è‡´è®¡ç®—ç»“æœå‡ºç°10*log10ï¼ˆ0ï¼‰æˆ–è€…é™¤æ•°ä¸º0çš„æƒ…å†µï¼Œé€ æˆè®¡ç®—é”™è¯¯ã€‚
 */
 
-extern double log10(double);
+extern int log10(double);
 
 #define DELTA_NEAR 0.125
 #define DELTA_FAR  0.5
 
-double g_dTargetPowerMax;
-double g_dNoisePower;
+int g_dTargetPowerMax;
+int g_dNoisePower;
 
-void case065(double powerNow)
+void case065(int powerNow)
 {
-	double temp1;
-	double temp2;
+	int temp1;
+	int temp2;
 
-	temp1 = 10.0 * log10(g_dTargetPowerMax*DELTA_NEAR/g_dNoisePower);
-	temp2 = 10.0 * log10(g_dTargetPowerMax*DELTA_FAR/g_dNoisePower);
+	temp1 = 10 * log10(g_dTargetPowerMax*DELTA_NEAR/g_dNoisePower);
+	temp2 = 10 * log10(g_dTargetPowerMax*DELTA_FAR/g_dNoisePower);
 
 	if (powerNow < temp1)
 	{
