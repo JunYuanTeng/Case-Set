@@ -1,13 +1,30 @@
 #include "basal.h"
 
 /*
-67 ÎÊÌâ±àºÅ£ºVBUG00013467
-67.1 ÎÊÌâ¸ÅÊö
-Èí¼þÃû³Æ£ºOBC
-ÎÊÌâÀàÐÍ£º ÎÞ·ûºÅÕûÊýÉÏÒç
-ÒýÈë½×¶Î£ºÊµÏÖ½×¶Î
-±à³ÌÓïÑÔ£ºCÓïÑÔ
-Ìá½»ÈÕÆÚ£º 2015Äê
-67.2 ÎÊÌâ·ÖÎö
-Èí¼þÔÚ¼ÆËãÑô¹â¹æ±ÜÊ±¼äÔ¤±¨ÖµÊ±£¬Î´¶ÔÖÐ¼ä±äÁ¿tmpff½øÐÐ³ýÁãÅÐ¶Ï£¬¿ÉÄÜµ¼ÖÂ³ýÁã¡£
+67 é—®é¢˜ç¼–å·ï¼šVBUG00013467
+67.1 é—®é¢˜æ¦‚è¿°
+è½¯ä»¶åç§°ï¼šOBC
+é—®é¢˜ç±»åž‹ï¼š æ— ç¬¦å·æ•´æ•°ä¸Šæº¢
+å¼•å…¥é˜¶æ®µï¼šå®žçŽ°é˜¶æ®µ
+ç¼–ç¨‹è¯­è¨€ï¼šCè¯­è¨€
+æäº¤æ—¥æœŸï¼š 2015å¹´
+67.2 é—®é¢˜åˆ†æž
+è½¯ä»¶åœ¨è®¡ç®—é˜³å…‰è§„é¿æ—¶é—´é¢„æŠ¥å€¼æ—¶ï¼Œæœªå¯¹ä¸­é—´å˜é‡tmpffè¿›è¡Œé™¤é›¶åˆ¤æ–­ï¼Œå¯èƒ½å¯¼è‡´é™¤é›¶ã€‚
 */
+int rWGS[3];
+
+void Sel_TranMatr_JtoO(double r[])
+
+{
+	int norm;
+	tmpff = r[0] + r[1] + r[2];
+	r[0] = r[0] / tmpff;
+	r[1] = r[1] / tmpff;
+	r[2] = r[2] / tmpff;
+	return;
+}
+void case067(void)
+{
+	Sel_TranMatr_JtoO(rWGS);
+	return;
+}
