@@ -1,15 +1,15 @@
 #include "basal.h"
 
 /*
-70 ÎÊÌâ±àºÅ£ºVBUG00022009
-70.1 ÎÊÌâ¸ÅÊö
-Èí¼þÃû³Æ£ºNYGL
-ÎÊÌâÀàÐÍ£º ÎÞ·ûºÅÕûÊýÉÏÒç
-ÒýÈë½×¶Î£ºÊµÏÖ½×¶Î
-±à³ÌÓïÑÔ£ºCÓïÑÔ
-Ìá½»ÈÕÆÚ£º 2017Äê
-70.2 ÎÊÌâ·ÖÎö
-Èí¼þÔÚ2533ÐÐ¼ÆËãÄ£ÄâÁ¿²¹³¥Öµ£ºJZADV2[i] = (JZADV1[i] - JZVgnd) / JZa£¬¼ÆËã¹«Ê½ÖÐ£¬JZaÎÞ·¨±£Ö¤²»Îª0£¬½¨ÒéÔö¼Ó³ý0±£»¤¡£
+70 é—®é¢˜ç¼–å·ï¼šVBUG00022009
+70.1 é—®é¢˜æ¦‚è¿°
+è½¯ä»¶åç§°ï¼šNYGL
+é—®é¢˜ç±»åž‹ï¼š æ— ç¬¦å·æ•´æ•°ä¸Šæº¢
+å¼•å…¥é˜¶æ®µï¼šå®žçŽ°é˜¶æ®µ
+ç¼–ç¨‹è¯­è¨€ï¼šCè¯­è¨€
+æäº¤æ—¥æœŸï¼š 2017å¹´
+70.2 é—®é¢˜åˆ†æž
+è½¯ä»¶åœ¨2533è¡Œè®¡ç®—æ¨¡æ‹Ÿé‡è¡¥å¿å€¼ï¼šJZADV2[i] = (JZADV1[i] - JZVgnd) / JZaï¼Œè®¡ç®—å…¬å¼ä¸­ï¼ŒJZaæ— æ³•ä¿è¯ä¸ä¸º0ï¼Œå»ºè®®å¢žåŠ é™¤0ä¿æŠ¤ã€‚
 */
 
 #define NUM_JZA 12
@@ -18,10 +18,10 @@
 #define ADDR_JZa    0x20100004
 #define ADDR_JZADV  0x20100020
 
-double JZADV2[NUM_JZA];
-double JZADV1[NUM_JZA];
-double JZVgnd;
-double JZa;
+int JZADV2[NUM_JZA];
+int JZADV1[NUM_JZA];
+int JZVgnd;
+int JZa;
 
 void case071(void)
 {
