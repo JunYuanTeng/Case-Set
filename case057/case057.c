@@ -1,29 +1,29 @@
 #include "basal.h"
 
 /*
-57 ÎÊÌâ±àºÅ£ºVBUG00000186
-57.1 ÎÊÌâ¸ÅÊö
-Èí¼şÃû³Æ£º DHXXCL
-ÎÊÌâÀàĞÍ£º ÓĞ·ûºÅÕûÊıÉÏÒç
-ÒıÈë½×¶Î£ºÊµÏÖ½×¶Î
-±à³ÌÓïÑÔ£ºCÓïÑÔ
-Ìá½»ÈÕÆÚ£º 2010Äê
-57.2 ÎÊÌâ·ÖÎö
-ÔÚNav_predict.cÖĞµÚ1103¡¢1104ĞĞÃ»½øĞĞ¶Ô±äÁ¿rsat ¡¢±äÁ¿rusrºÍ±äÁ¿rµÄ³ıÁã±£»¤£º
+57 é—®é¢˜ç¼–å·ï¼šVBUG00000186
+57.1 é—®é¢˜æ¦‚è¿°
+è½¯ä»¶åç§°ï¼š DHXXCL
+é—®é¢˜ç±»å‹ï¼š æœ‰ç¬¦å·æ•´æ•°ä¸Šæº¢
+å¼•å…¥é˜¶æ®µï¼šå®ç°é˜¶æ®µ
+ç¼–ç¨‹è¯­è¨€ï¼šCè¯­è¨€
+æäº¤æ—¥æœŸï¼š 2010å¹´
+57.2 é—®é¢˜åˆ†æ
+åœ¨Nav_predict.cä¸­ç¬¬1103ã€1104è¡Œæ²¡è¿›è¡Œå¯¹å˜é‡rsat ã€å˜é‡rusrå’Œå˜é‡rçš„é™¤é›¶ä¿æŠ¤ï¼š
 Oc =  ( rsat2+r2-rusr2 ) / ( 2*rsat*r );
 Ic = -( rusr2+r2-rsat2 ) / ( 2*rusr*r );
 */
 
-extern float sqrtX(float);
+extern int sqrtX(float);
 
-void case057(float x, float y, float z, float rsat, float rusr)
+void case057(int x, int y, int z, int rsat, int rusr)
 {
-	float r2;
-	float Oc;
-	float Ic;
-	float r;
-	float rsat2;
-	float rusr2;
+	int r2;
+	int Oc;
+	int Ic;
+	int r;
+	int rsat2;
+	int rusr2;
 
 	r2 = x * x + y * y + z * z;
 	r = sqrtX(r2);
