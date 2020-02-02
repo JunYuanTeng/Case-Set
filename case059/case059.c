@@ -16,7 +16,7 @@ Ic = -( rusr2+r2-rsat2 ) / ( 2*rusr*r );
 
 extern int sqrtX(float);
 
-void case057(int x, int y, int z, int rsat, int rusr)
+void case059(int x, int y, int z, int rsat, int rusr)
 {
 	int r2;
 	int Oc;
